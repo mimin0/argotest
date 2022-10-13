@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
+  name: podinfo
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: podinfo
   project: default
   source:
-    path: apps/
+    path: apps/podinfo
     repoURL: https://github.com/mimin0/argotest.git
     targetRevision: HEAD
   syncPolicy:
