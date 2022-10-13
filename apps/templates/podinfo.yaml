@@ -9,7 +9,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: default
-  project: podinfo
+  project: default
   source:
     chart: podinfo/podinfo
     repoURL: https://stefanprodan.github.io/podinfo
