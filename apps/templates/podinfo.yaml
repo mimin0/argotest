@@ -13,7 +13,7 @@ spec:
   source:
     chart: podinfo/podinfo
     repoURL: https://stefanprodan.github.io/podinfo
-    # targetRevision: 6.2.1
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
