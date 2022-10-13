@@ -11,7 +11,7 @@ spec:
     namespace: default
   project: default
   source:
-    chart: podinfo/podinfo
+    chart: podinfo
     repoURL: https://stefanprodan.github.io/podinfo
     targetRevision: HEAD
   syncPolicy:
