@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus
+  name: podinfo
   namespace: default
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -9,15 +9,15 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: default
-  project: default
+  project: podinfo
   source:
-    chart: kube-prometheus-stack
+    chart: podinfo/podinfo
     helm:
       values: |
         pushgateway:
           enabled: false
-    repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 41.3.2
+    repoURL: https://stefanprodan.github.io/podinfo
+    targetRevision: 6.2.1
   syncPolicy:
     automated:
       prune: true
