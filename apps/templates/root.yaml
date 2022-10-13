@@ -11,6 +11,8 @@ spec:
   project: default
   source:
     path: apps/
+    directory:
+      recurse: true
     repoURL: https://github.com/mimin0/argotest.git
     targetRevision: HEAD
   syncPolicy:
