@@ -12,10 +12,6 @@ spec:
   project: podinfo
   source:
     chart: podinfo/podinfo
-    helm:
-      values: |
-        pushgateway:
-          enabled: false
     repoURL: https://stefanprodan.github.io/podinfo
     targetRevision: 6.2.1
   syncPolicy:
